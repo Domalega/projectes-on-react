@@ -5,6 +5,7 @@ import CounterPage from "./pages/CounterPage";
 import ModalPage from "./pages/ModalPage";
 import ListUsersPage from "./pages/ListUsersPage";
 import NavBar from "./components/NavBar";
+import ConverterPage from "./pages/ConverterPage";
 
 interface Ilink {
   page: string;
@@ -20,13 +21,14 @@ const App: React.FC<AppProps> = () => {
     { page: "Counter", path: "/counter", component: CounterPage },
     { page: "Modal", path: "/modal", component: ModalPage },
     { page: "List", path: "/list", component: ListUsersPage },
+    { page: "ConverterPage", path: "/convert", component: ConverterPage },
   ];
   return (
     <BrowserRouter>
       <NavBar links={routes} />
       <Routes>
         {routes.map((route) => {
-          if (route.page != "Menu")
+          if (route.page !== "Menu")
             return (
               <Route
                 key={route.page}
@@ -34,7 +36,7 @@ const App: React.FC<AppProps> = () => {
                 element={<route.component />}
               />
             );
-          if (route.page == "Menu")
+          if (route.page === "Menu")
             return (
               <Route
                 key={route.page}
@@ -42,6 +44,7 @@ const App: React.FC<AppProps> = () => {
                 element={<route.component links={routes} />}
               />
             );
+          return null;
         })}
       </Routes>
     </BrowserRouter>
