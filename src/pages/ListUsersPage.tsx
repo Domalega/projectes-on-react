@@ -12,7 +12,7 @@ interface IUser {
 interface ListUsersPageProps {}
 
 const ListUsersPage: React.FC<ListUsersPageProps> = () => {
-  const url: string = "http://reqres.in/api/users";
+  const url: string = "https://reqres.in/api/users";
   const [users, setUsers] = useState<IUser[] | null>(null);
 
   useEffect(() => {
