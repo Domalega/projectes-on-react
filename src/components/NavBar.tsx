@@ -19,7 +19,7 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
           <Link
             key={index}
             to={link.path}
-            className="text-white mr-4 hover:text-emerald-400 hover:border-b-8 duration-200 ease-in"
+            className="font-thin md:text-2xl text-white mr-4 hover:text-emerald-400 hover:border-b-8 duration-200 ease-in"
           >
             {link.page}
           </Link>
