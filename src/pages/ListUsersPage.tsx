@@ -21,7 +21,7 @@ const ListUsersPage: React.FC<ListUsersPageProps> = () => {
         const response = await fetch(url);
         if (response.ok) {
           const data = await response.json();
-          setUsers(data.data);
+          setTimeout(() => setUsers(data.data), 2000);
         }
       } catch (error) {
         console.log(error);
