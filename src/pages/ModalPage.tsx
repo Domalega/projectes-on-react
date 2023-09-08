@@ -11,7 +11,7 @@ const ModalPage: React.FC<ModalPageProps> = () => {
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-800 bg-opacity-50">
           <div className="bg-white w-1/2 p-6 rounded shadow-lg relative">
             <h2 className="text-2xl font-bold mb-4">Some title</h2>
-            <div className="mb-4">
+            <div className="mb-4 flex justify-center">
               <img src="pic/rick-roll.gif" alt="hehe" />
             </div>
             <button

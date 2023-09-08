@@ -4,8 +4,9 @@ import MenuPage from "./pages/MenuPage";
 import CounterPage from "./pages/CounterPage";
 import ModalPage from "./pages/ModalPage";
 import ListUsersPage from "./pages/ListUsersPage";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/NavBar/NavBar";
 import ConverterPage from "./pages/ConverterPage";
+import ReduxPage from "./pages/ReduxPage";
 
 interface Ilink {
   page: string;
@@ -22,6 +23,7 @@ const App: React.FC<AppProps> = () => {
     { page: "Modal", path: "/modal", component: ModalPage },
     { page: "List", path: "/list", component: ListUsersPage },
     { page: "ConverterPage", path: "/convert", component: ConverterPage },
+    { page: "ReduxPage", path: "/redux", component: ReduxPage },
   ];
   return (
     <BrowserRouter>
